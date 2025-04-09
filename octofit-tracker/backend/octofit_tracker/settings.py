@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'corsheaders',
+    'octofit_tracker',
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,8 @@ DATABASES = {
         },
     }
 }
+
+DATABASES['default']['CLIENT']['port'] = 27017
 
 
 # Password validation
