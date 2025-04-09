@@ -10,7 +10,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         # Connect to MongoDB
-        client = MongoClient(settings.DATABASES['default']['HOST'], settings.DATABASES['default']['PORT'])
+        client = MongoClient(settings.DATABASES['default']['CLIENT']['host'], int(settings.DATABASES['default']['CLIENT']['port']))
         db = client[settings.DATABASES['default']['NAME']]
 
         # Drop existing collections
